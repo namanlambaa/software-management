@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #cbf1ef;
+    font-family: Helvetica, Arial, Georgia, Tahoma and Roboto;
+}
+
+.navbar {
+    border-bottom: solid #2b7a78;
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #17252a;
+    width: 100%;
+    padding: 0.2%;
+}
+
+.navbar .logo {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    margin-left: 15%;
+    border: 2px solid black;
+    width: 25%;
+    height: 75%;
+}
+
+.rightMenu_img {
+    position: relative;
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rightMenu_img img {
+    cursor: pointer;
+    width: 2.1rem;
+    text-align: right;
+    margin-right: 5%;
+
+}
+
+.rightMenu-wrap {
+    position: absolute;
+    top: 88%;
+    right: 1%;
+    width: 200px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.1s;
+}
+
+.rightMenu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.rightSubMenu {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.rightSubMenu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    margin: 7px 0 10px;
+    background-color: #ccc;
+}
+
+.log-out a {
+    text-decoration: none;
+    color: black;
+}
+
+.log-out:hover,
+.user-info a:hover {
+    transform: translate(1px, -1px)
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    padding: 0.7rem 0.7rem;
+    font-size: 1em;
+    margin: 0.3rem;
+    border: 0.15rem solid black;
+    background-color: #17252a;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    border-color: black;
+    color: white;
+    box-shadow: 0.5rem 0.5rem 0.5rem -0.5rem #244847;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Requests</title>
+    <link rel="stylesheet" href="requests.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../Logo.png" alt="Software License Management Logo" />
+      </div>
+      <div class="rightMenu_img">
+        <img src="../menu_icon.svg" alt="rightMenu" onclick="toggleMenu()" />
+      </div>
+
+      <div class="rightMenu-wrap" id="subMenu">
+        <div class="rightSubMenu">
+          <div class="user-info">
+            <a id="loggedInUser" href=""></a>
+          </div>
+          <hr />
+
+          <div class="log-out">
+            <a href="#" id="logout-link">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <button class="button">
+        <a href="../Page3_ReqForm/ReqForm.html" target="_blank">Request for installation of a
+          Software</a></button><br />
+      <button class="button" id="viewStatusButton">
+        <a href="../Page4_ViewStatus/ViewStatus.html">View Status of Submitted
+          Requests</a></button><br />
+      <button class="button admin-button" id="approveButton">
+        <a href="../Page5_AdminView/adminView.html">Approve requests - only for Admin</a></button><br />
+    </div>
+
+    <script src="requests.js"></script>
+  </body>
+
+</html>

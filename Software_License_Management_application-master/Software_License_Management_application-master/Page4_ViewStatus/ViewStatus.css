@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.table_container {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #2a3837;
+    width: 95%;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #64908c;
+    padding: 0.6rem;
+    text-align: left;
+}
+
+th {
+    background-color: #cbf1ef;
+    font-weight: 800;
+}

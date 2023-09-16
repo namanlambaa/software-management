@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ReqForm.css">
+        <title>Request for installation form</title>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="form_content">
+                <form action="" method="" name="ReqForm" id="ReqForm">
+                    <p id="heading">Request Form for Installation of a Software</p>
+                    <br>
+                    <br>
+
+                    <div class="prefilled_info">
+
+                        <input type="text" id="name" class="prefilled" value="" placeholder="Name" readonly>
+
+                        <input type="text" id="location" class="prefilled" value="" placeholder="Location" readonly>
+
+                        <input type="text" id="department" class="prefilled" value="" placeholder="Department" readonly>
+                    </div>
+                    <br>
+                    <br>
+                    <p>
+                        <label for="selected_software">Software to be installed <span class="required">*</span>:
+                        </label>
+                        <select name="selected_software" id="selected_software" required>
+                            <option value="" selected>Select Software</option>
+                            <option value="Adobe_Acrobat_Reader">Adobe Acrobat Reader</option>
+                            <option value="MS_Excel">MS Excel</option>
+                            <option value="Adobe_Illustrator">Adobe Illustrator</option>
+                            <option value="Skype">Skype</option>
+                            <option value="Slack">Slack</option>
+                            <option value="Office_365">Office 365</option>
+                            <option value="Figma">Figma</option>
+                            <option value="Adobe_Photoshop">Adobe Photoshop</option>
+                            <option value="MS_PowerPoint">MS PowerPoint</option>
+                            <option value="Others">Others</option>
+                            <option value="Zoom">Zoom</option>
+                            <option value="MS_Teams">Microsoft Teams</option>
+                            <option value="Dropbox">Dropbox</option>
+                            <option value="Evernote">Evernote</option>
+                            <option value="MS_OneNote">Microsoft OneNote</option>
+                            <option value="Toggl">Toggl</option>
+                            <option value="Canva">Canva</option>
+                            <option value="TeamViewer">TeamViewer</option>
+                            <option value="Prezi">Prezi</option>
+                            <option value="Grammarly">Grammarly</option>
+                            <option value="Dropbox_Paper">Dropbox Paper</option>
+
+                        </select>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="others_software">If "Others", specify name of Software: </label>
+                        <input type="text" id="others_software" name="others_software">
+                    </p>
+                    <br>
+                    <p>
+                        <label for="purpose">Purpose <span class="required">*</span>: </label>
+                        <textarea name="purpose" id="purpose" cols="30" rows="2" required></textarea>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="host_name">Hostname <span class="required">*</span>: </label>
+                    <p class="find_hostname">How to find Hostname (<a target="_blank" class="find_hostname_link"
+                            href="findHostname.pdf">Link to
+                            pdf</a>)</p>
+                    <br>
+                    <input type="text" id="host_name" name="host_name" value="" required>
+                    </p>
+                    <br>
+                    <p>
+                        <label for="user_remarks">Remarks(If any): </label>
+                        <textarea name="user_remarks" id="user_remarks" cols="30" rows="2"></textarea>
+                    </p>
+                    <br>
+
+                    <br>
+
+                    <div class="submit_button">
+                        <button type="submit" class="submit" id="submit">Submit</button>
+                        <div class="mask_submit">
+                            <div class="success_message">
+                                Entries Submitted Successfully.
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="ReqForm.js" type="module"></script>
+    </body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin View</title>
+    <link rel="stylesheet" href="adminView.css" />
+  </head>
+
+  <body>
+    <h2>View Status of Submitted Requests</h2>
+    <br />
+    <div class="table_container">
+      <table>
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>User ID</th>
+            <th>Name of Software</th>
+            <th>If Other, details</th>
+            <th>Purpose</th>
+            <th>Hostname</th>
+            <th>Requested on</th>
+            <th>Requested By</th>
+            <th>Status</th>
+            <th>Status updated on</th>
+            <th>User Remarks</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="adminView.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBnSLmidHzUy_TSU26r1oA2GW8HrCj8G8c",
+        authDomain: "software-license-managem-bbb5f.firebaseapp.com",
+        databaseURL:
+          "https://software-license-managem-bbb5f-default-rtdb.firebaseio.com",
+        projectId: "software-license-managem-bbb5f",
+        storageBucket: "software-license-managem-bbb5f.appspot.com",
+        messagingSenderId: "558942243393",
+        appId: "1:558942243393:web:aaa3488d05d8b1b06414c0",
+      };
+
+      const app = firebase.initializeApp(firebaseConfig);
+      function approveRequest(key, state) {
+        const date = new Date();
+        firebase
+          .database()
+          .ref("FormData/" + key)
+          .once("value")
+          .then(function (snapshot) {
+
+            var data = snapshot.val();
+            console.log(data);
+            var messagesRef = firebase
+              .database()
+              .ref("FormData/" + key)
+              .set({
+                ...data,
+                status: state,
+                stateUpdateDate: date.toLocaleDateString(),
+              })
+              .then(() => {
+                location.reload();
+              });
+          });
+      }
+    </script>
+  </body>
+
+</html>
