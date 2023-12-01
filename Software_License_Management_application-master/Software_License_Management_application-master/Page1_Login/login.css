@@ -31,7 +31,7 @@ label {
 input[type="text"],
 input[type="password"] {
     padding: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
     border: 1px solid #244847;
     border-radius: 3px;
 }
